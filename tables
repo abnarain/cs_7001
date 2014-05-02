@@ -1,0 +1,8 @@
+CREATE TABLE _users_(id INT NOT NULL AUTO_INCREMENT,PRIMARY KEY(id),username_ VARCHAR(50),password_ VARCHAR (20),phone_no_ VARCHAR (15));
+
+CREATE TABLE _ratings_(rid INT NOT NULL AUTO_INCREMENT,PRIMARY KEY(rid),value_ INT , r_id_ INT NOT NULL, FOREIGN KEY (r_id_) REFERENCES _users_(id));
+
+CREATE TABLE _data_(did INT NOT NULL AUTO_INCREMENT,PRIMARY KEY(did),age_group INT, nationality VARCHAR(20),sex CHAR(1) , d_id_ INT NOT NULLi, FOREIGN KEY (d_id_) REFERENCES _users_(id));
+
+CREATE TABLE _time_(tid INT NOT NULL AUTO_INCREMENT,PRIMARY KEY(tid),login_time timestamp NOT NULL default '0000-00-00 00:00:00', t_now INT, t_10 INT,t_20 INT,t_30 INT,   t_id_ INT NOT NULL, FOREIGN KEY (t_id_) REFERENCES _users_(id));
+
